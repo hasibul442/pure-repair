@@ -100,7 +100,82 @@
 			</div>
 		</div>
 	</section>
+    <section class="bg-0 p-t-92 p-b-60">
+		<div class="container">
+			<!-- Title section -->
+			<div class="flex-col-c-c p-b-50">
+				<h3 class="t1-b-1 cl-3 txt-center m-b-11">
+					Our Services Process
+				</h3>
 
+				<div class="size-a-2 bg-3"></div>
+			</div>
+
+			<!--  -->
+			<div class="row justify-content-center">
+                <div class="col-sm-2 ">
+                    <div class="card" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+                        <div class="card-body ">
+                            <h3 class="text-center"><b>Service Inquiry</b></h3><br>
+                            <p class="text-center">Step <br> 01 <br> <br> Let us know your all Inquiries</p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-2 ">
+                    <div class="card" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+                        <div class="card-body ">
+                            <h3 class="text-center"><b>Discuss</b></h3><br>
+                            <p class="text-center">Step <br> 02 <br> <br> Discuss With Experts</p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-2 ">
+                    <div class="card" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+                        <div class="card-body ">
+                            <h3 class="text-center"><b>Cost</b></h3><br>
+                            <p class="text-center">Step <br> 03 <br> <br>Expert Will Discuss About Cost</p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-2 ">
+                    <div class="card" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+                        <div class="card-body ">
+                            <h3 class="text-center"><b>Take Time</b></h3><br>
+                            <p class="text-center">Step <br> 04 <br> <br>We Need time to repeir</p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-2 ">
+                    <div class="card" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+                        <div class="card-body ">
+                            <h3 class="text-center"><b>Device QC</b></h3><br>
+                            <p class="text-center">Step <br> 05 <br> <br>We carefully pass QC before delivery</p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-2 ">
+                    <div class="card" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+                        <div class="card-body ">
+                            <h3 class="text-center"><b>Deliver</b></h3><br>
+                            <p class="text-center">Step <br> 06 <br> <br>Finally we deliver your device</p>
+
+                        </div>
+                    </div>
+                </div>
+
+			</div>
+		</div>
+	</section>
 	<!-- Services -->
 	<section class="bg-0 p-t-92 p-b-60">
 		<div class="container">
@@ -287,169 +362,7 @@
 	</section>
 
 	<!-- Testimonials -->
-	<section class="parallax100 kit-overlay2 p-t-92 p-b-90" style="background-image: url(images/bg-02.jpg);">
-		<div class="container">
-			<!-- Title section -->
-			<div class="flex-col-c-c p-b-50">
-				<h3 class="t1-b-1 cl-0 txt-center m-b-11">
-					Testimonials
-				</h3>
-
-				<div class="size-a-2 bg-0"></div>
-			</div>
-
-			<!-- Slick1 -->
-			<div class="wrap-slick1">
-				<div class="slide-slick">
-					<div class="item-slick p-rl-15 wrap-block3">
-						<div class="block3 d-flex">
-							<div class="block3-content d-flex">
-								<div class="block3-pic wrap-pic-w">
-									<img src="{{ asset('frontend/images/ava-01.jpg') }}" alt="IMG">
-								</div>
-
-								<div class="block3-text d-flex w-full-sr575">
-									<span class="block3-text-child t1-m-1 text-uppercase cl-0 p-b-4">
-										Marie Crawford
-									</span>
-
-									<span class="block3-text-child t1-s-3 cl-14 p-b-9">
-										Wall Street Combany
-									</span>
-
-									<p class="block3-text-child t1-s-2 cl-13">
-										The point of using Lorem Ipsum is that it has a normal distr bution of letters, as opposed to using Many desktop publis shing packages and web page Ipsum.
-									</p>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="item-slick p-rl-15 wrap-block3">
-						<div class="block3 d-flex">
-							<div class="block3-content d-flex">
-								<div class="block3-pic wrap-pic-w">
-									<img src="{{ asset('frontend/images/ava-02.jpg') }}" alt="IMG">
-								</div>
-
-								<div class="block3-text d-flex w-full-sr575">
-									<span class="block3-text-child t1-m-1 text-uppercase cl-0 p-b-4">
-										Jerry Alexander
-									</span>
-
-									<span class="block3-text-child t1-s-3 cl-14 p-b-9">
-										Wall Street Combany
-									</span>
-
-									<p class="block3-text-child t1-s-2 cl-13">
-										The point of using Lorem Ipsum is that it has a normal distr bution of letters, as opposed to using Many desktop publis shing packages and web page Ipsum.
-									</p>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="item-slick p-rl-15 wrap-block3">
-						<div class="block3 d-flex">
-							<div class="block3-content d-flex">
-								<div class="block3-pic wrap-pic-w">
-									<img src="{{ asset('frontend/images/ava-01.jpg') }}" alt="IMG">
-								</div>
-
-								<div class="block3-text d-flex w-full-sr575">
-									<span class="block3-text-child t1-m-1 text-uppercase cl-0 p-b-4">
-										Marie Crawford
-									</span>
-
-									<span class="block3-text-child t1-s-3 cl-14 p-b-9">
-										Wall Street Combany
-									</span>
-
-									<p class="block3-text-child t1-s-2 cl-13">
-										The point of using Lorem Ipsum is that it has a normal distr bution of letters, as opposed to using Many desktop publis shing packages and web page Ipsum.
-									</p>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="item-slick p-rl-15 wrap-block3">
-						<div class="block3 d-flex">
-							<div class="block3-content d-flex">
-								<div class="block3-pic wrap-pic-w">
-									<img src="{{ asset('frontend/images/ava-02.jpg') }}" alt="IMG">
-								</div>
-
-								<div class="block3-text d-flex w-full-sr575">
-									<span class="block3-text-child t1-m-1 text-uppercase cl-0 p-b-4">
-										Jerry Alexander
-									</span>
-
-									<span class="block3-text-child t1-s-3 cl-14 p-b-9">
-										Wall Street Combany
-									</span>
-
-									<p class="block3-text-child t1-s-2 cl-13">
-										The point of using Lorem Ipsum is that it has a normal distr bution of letters, as opposed to using Many desktop publis shing packages and web page Ipsum.
-									</p>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="item-slick p-rl-15 wrap-block3">
-						<div class="block3 d-flex">
-							<div class="block3-content d-flex">
-								<div class="block3-pic wrap-pic-w">
-									<img src="{{ asset('frontend/images/ava-01.jpg') }}" alt="IMG">
-								</div>
-
-								<div class="block3-text d-flex w-full-sr575">
-									<span class="block3-text-child t1-m-1 text-uppercase cl-0 p-b-4">
-										Marie Crawford
-									</span>
-
-									<span class="block3-text-child t1-s-3 cl-14 p-b-9">
-										Wall Street Combany
-									</span>
-
-									<p class="block3-text-child t1-s-2 cl-13">
-										The point of using Lorem Ipsum is that it has a normal distr bution of letters, as opposed to using Many desktop publis shing packages and web page Ipsum.
-									</p>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="item-slick p-rl-15 wrap-block3">
-						<div class="block3 d-flex">
-							<div class="block3-content d-flex">
-								<div class="block3-pic wrap-pic-w">
-									<img src="{{ asset('frontend/images/ava-02.jpg') }}" alt="IMG">
-								</div>
-
-								<div class="block3-text d-flex w-full-sr575">
-									<span class="block3-text-child t1-m-1 text-uppercase cl-0 p-b-4">
-										Jerry Alexander
-									</span>
-
-									<span class="block3-text-child t1-s-3 cl-14 p-b-9">
-										Wall Street Combany
-									</span>
-
-									<p class="block3-text-child t1-s-2 cl-13">
-										The point of using Lorem Ipsum is that it has a normal distr bution of letters, as opposed to using Many desktop publis shing packages and web page Ipsum.
-									</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="wrap-dot-slick p-t-70"></div>
-			</div>
-		</div>
-	</section>
+	@include('frontend.include.testimonials')
 
 	<!-- Sign up -->
 	<section class="bg-0 p-t-92 p-b-90">

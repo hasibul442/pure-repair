@@ -5,7 +5,7 @@
                 <div class="col-sm-6 col-md-6 col-lg-6 p-b-20">
                     <div class="size-h-1 flex-s-e p-b-6 m-b-18">
                         <a href="#">
-                            <img class="max-s-full" src="{{ asset('frontend/images/icons/logo-02.png') }}" alt="IMG">
+                            <img class="img-fluid" style="width: 100px; height:70px" src="{{ asset('frontend/images/icon/logo/logo.png') }}" alt="IMG">
                         </a>
                     </div>
 
