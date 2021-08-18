@@ -14,22 +14,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('backend.dashboard');
-});
-Route::get('/admin/dashboard', function () {
-    return view('backend.dashboard');
-});
-Route::get('/home', function () {
-    return view('frontend.home');
-});
-Route::get('/service', function () {
-    return view('frontend.service');
-});
+
 
 Auth::routes();
+Route::resource('/', 'App\Http\Controllers\FrontpageController');
+Route::get('/','App\Http\Controllers\FrontpageController@homepage');
+Route::get('/home','App\Http\Controllers\FrontpageController@homepage');
+Route::get('/service','App\Http\Controllers\FrontpageController@service');
 
-//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/admin/home', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
 
 Route::resource('/admin/banner', 'App\Http\Controllers\BannerController');
 Route::get('/admin/banner','App\Http\Controllers\BannerController@index')->name('banner');

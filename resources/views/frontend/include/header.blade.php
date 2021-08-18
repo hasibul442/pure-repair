@@ -59,7 +59,9 @@
             <div class="limiter-menu-desktop container">
                 <!-- Logo desktop -->
                 <div class="logo">
-                    <a href="index.html"><img src="{{ asset('frontend/images/icons/logo-01.png') }}" alt="LOGO"></a>
+                    <a href="{{url('/home')}}">
+                        <img src="{{ asset('frontend/images/icon/logo/logo.png') }}" alt="LOGO">
+                    </a>
                 </div>
 
                 <!-- Menu desktop -->

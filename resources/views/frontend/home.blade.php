@@ -83,13 +83,13 @@
 					    data-basealign="slide"
     					data-responsive_offset="off"
 					    >
-						    <a href="#" class="btn1 flex-c-c">
+						    {{-- <a href="#" class="btn1 flex-c-c">
 						    	Our project
 						    </a>
 
 						    <a href="#" class="btn2 flex-c-c">
 						    	Learn more
-						    </a>
+						    </a> --}}
 					    </div>
 					</li>
                     @endforeach
@@ -118,7 +118,7 @@
 				<div class="col-sm-10 col-md-8 col-lg-4 p-b-40">
 					<div class="bg-10 h-full">
 						<a href="services-detail-01.html" class="hov-img0 of-hidden bg-0">
-							<img src="{{ asset('frontend/images/services-01.jpg') }}" alt="IMG">
+							<img src="{{ asset('frontend/images/service/S3.jpeg') }}" alt="IMG">
 						</a>
 
 						<div class="p-rl-30 p-t-26 p-b-20">
@@ -138,7 +138,7 @@
 				<div class="col-sm-10 col-md-8 col-lg-4 p-b-40">
 					<div class="bg-10 h-full">
 						<a href="services-detail-01.html" class="hov-img0 of-hidden bg-0">
-							<img src="{{ asset('frontend/images/services-02.jpg') }}" alt="IMG">
+							<img src="{{ asset('frontend/images/service/S4.jpg') }}" alt="IMG">
 						</a>
 
 						<div class="p-rl-30 p-t-26 p-b-20">
@@ -158,7 +158,7 @@
 				<div class="col-sm-10 col-md-8 col-lg-4 p-b-40">
 					<div class="bg-10 h-full">
 						<a href="services-detail-01.html" class="hov-img0 of-hidden bg-0">
-							<img src="{{ asset('frontend/images/services-03.jpg') }}" alt="IMG">
+							<img src="{{ asset('frontend/images/service/S1.png') }}" alt="IMG">
 						</a>
 
 						<div class="p-rl-30 p-t-26 p-b-20">

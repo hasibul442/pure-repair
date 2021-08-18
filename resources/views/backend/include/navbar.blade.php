@@ -15,8 +15,10 @@
                     </div>
                 </div>
             </div>
-            <a href="index.html">
-                <img class="img-fluid" src="{{ asset('backend/assets/images/logo.png') }}" alt="Theme-Logo" />
+            <a href="#">
+                <div class="text-center">
+                    <img src="{{ asset('frontend/images/icon/logo/logo.png') }}" alt="logo.png" class="img-fluid" style="height: 40px; width: 100px">
+                </div>
             </a>
             <a class="mobile-options waves-effect waves-light">
                 <i class="ti-more"></i>
@@ -104,9 +106,12 @@
                             </a>
                         </li>
                         <li class="waves-effect waves-light">
-                            <a href="auth-normal-sign-in.html">
+                            <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                 <i class="ti-layout-sidebar-left"></i> Logout
                             </a>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                @csrf
+                            </form>
                         </li>
                     </ul>
                 </li>
