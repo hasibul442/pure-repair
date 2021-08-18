@@ -1,5 +1,5 @@
 <footer>
-    <div class="parallax100 kit-overlay1 p-t-35 p-b-10" style="background-image: url(images/bg-03.jpg);">
+    <div class="parallax100 kit-overlay1 p-t-35 p-b-10" >
         <div class="container">
             <div class="row justify-content-center justify-content-md-start">
                 <div class="col-sm-6 col-md-6 col-lg-6 p-b-20">

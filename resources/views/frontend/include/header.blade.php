@@ -27,7 +27,7 @@
                         <span class="fs-16 m-r-6">
                             <i class="fa fa-clock-o" aria-hidden="true"></i>
                         </span>
-                        <span>Mon-Sat 09:00 am - 17:00 pm/Sunday CLOSE</span>
+                        <span>Tus-Sun 09:00 am - 17:00 pm/Monday CLOSE</span>
                     </div>
                 </div>
 
@@ -138,7 +138,7 @@
         <div class="wrap-header-mobile">
             <!-- Logo moblie -->
             <div class="logo-mobile">
-                <a href="index.html"><img src="{{ asset('frontend/images/icons/logo-01.png') }}" alt="LOGO"></a>
+                <a href="#"><img src="{{ asset('frontend/images/icon/logo/logo.png') }}" alt="LOGO"></a>
             </div>
 
 
@@ -157,7 +157,9 @@
                         <span class="fs-16 m-r-6">
                             <i class="fa fa-home" aria-hidden="true"></i>
                         </span>
-                        <span>379 5Th Ave New York, Nyc 10018</span>
+                        @foreach (App\Models\Information::where('type','address')->get() as $item)
+                            <span>{{ $item->info }}</span>
+                        @endforeach
                     </div>
                 </li>
 
@@ -166,7 +168,9 @@
                         <span class="fs-16 m-r-6">
                             <i class="fa fa-phone" aria-hidden="true"></i>
                         </span>
-                        <span>(+1) 96 716 6879</span>
+                        @foreach (App\Models\Information::where('type','phone')->get() as $item)
+                            <span>{{ $item->info }},&nbsp;</span>
+                        @endforeach
                     </div>
                 </li>
 
@@ -175,7 +179,7 @@
                         <span class="fs-16 m-r-6">
                             <i class="fa fa-clock-o" aria-hidden="true"></i>
                         </span>
-                        <span>Mon-Sat 09:00 am - 17:00 pm/Sunday CLOSE</span>
+                        <span>Tus-Sun 09:00 am - 17:00 pm/Monday CLOSE</span>
                     </div>
                 </li>
 

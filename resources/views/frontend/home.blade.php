@@ -114,7 +114,7 @@
 			<!--  -->
 			<div class="row justify-content-center">
                 <div class="col-sm-2 ">
-                    <div class="card" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+                    <div class="card mt-2 service_process" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
                         <div class="card-body ">
                             <h3 class="text-center"><b>Service Inquiry</b></h3><br>
                             <p class="text-center">Step <br> 01 <br> <br> Let us know your all Inquiries</p>
@@ -124,7 +124,7 @@
                 </div>
 
                 <div class="col-sm-2 ">
-                    <div class="card" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+                    <div class="card mt-2 service_process" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
                         <div class="card-body ">
                             <h3 class="text-center"><b>Discuss</b></h3><br>
                             <p class="text-center">Step <br> 02 <br> <br> Discuss With Experts</p>
@@ -134,7 +134,7 @@
                 </div>
 
                 <div class="col-sm-2 ">
-                    <div class="card" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+                    <div class="card mt-2 service_process" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
                         <div class="card-body ">
                             <h3 class="text-center"><b>Cost</b></h3><br>
                             <p class="text-center">Step <br> 03 <br> <br>Expert Will Discuss About Cost</p>
@@ -144,7 +144,7 @@
                 </div>
 
                 <div class="col-sm-2 ">
-                    <div class="card" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+                    <div class="card mt-2 service_process" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
                         <div class="card-body ">
                             <h3 class="text-center"><b>Take Time</b></h3><br>
                             <p class="text-center">Step <br> 04 <br> <br>We Need time to repeir</p>
@@ -154,7 +154,7 @@
                 </div>
 
                 <div class="col-sm-2 ">
-                    <div class="card" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+                    <div class="card mt-2 service_process" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
                         <div class="card-body ">
                             <h3 class="text-center"><b>Device QC</b></h3><br>
                             <p class="text-center">Step <br> 05 <br> <br>We carefully pass QC before delivery</p>
@@ -164,7 +164,7 @@
                 </div>
 
                 <div class="col-sm-2 ">
-                    <div class="card" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+                    <div class="card mt-2 service_process" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
                         <div class="card-body ">
                             <h3 class="text-center"><b>Deliver</b></h3><br>
                             <p class="text-center">Step <br> 06 <br> <br>Finally we deliver your device</p>

@@ -1,4 +1,4 @@
-<section class="parallax100 kit-overlay2 p-t-92 p-b-90" style="background-image: url(images/bg-02.jpg);">
+<section class="parallax100 kit-overlay2 p-t-92 p-b-90" >
     <div class="container">
         <!-- Title section -->
         <div class="flex-col-c-c p-b-50">
