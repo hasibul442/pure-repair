@@ -21,6 +21,7 @@ Route::resource('/', 'App\Http\Controllers\FrontpageController');
 Route::get('/','App\Http\Controllers\FrontpageController@homepage');
 Route::get('/home','App\Http\Controllers\FrontpageController@homepage');
 Route::get('/service','App\Http\Controllers\FrontpageController@service');
+Route::get('/allrepairservice/{id}/{slug}','App\Http\Controllers\FrontpageController@single_service_view');
 
 Route::get('/admin/home', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
 
@@ -38,3 +39,6 @@ Route::delete('/admin/information/delete/{id}','App\Http\Controllers\Information
 Route::resource('/admin/service', 'App\Http\Controllers\ServiceController');
 Route::get('/admin/service','App\Http\Controllers\ServiceController@index')->name('service');
 Route::post('/admin/service/add','App\Http\Controllers\ServiceController@store')->name('service-add');
+
+Route::resource('/admin/product', 'App\Http\Controllers\ProductController');
+Route::get('/admin/product', 'App\Http\Controllers\ProductController@index')->name('product');

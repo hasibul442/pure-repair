@@ -198,7 +198,7 @@
 
 						<div class="p-rl-30 p-t-26 p-b-20">
 							<h4 class="p-b-9">
-								<a href="services-detail-01.html" class="t1-m-1 cl-0 hov-link2 trans-02">
+								<a href="{{ url('/service') }}" class="t1-m-1 cl-0 hov-link2 trans-02">
 									Fix Mobile Tablet
 								</a>
 							</h4>

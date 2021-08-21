@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Service;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class ServiceController extends Controller
 {
@@ -40,10 +41,13 @@ class ServiceController extends Controller
      */
     public function store(Request $request)
     {
+        $slug=Str::slug($request->name);
         $service = new Service;
         $service->name = $request->name;
         $service->description = $request->description;
         $service->status = $request->status;
+        $service->slug = $slug.'-'.date('ymdis').'-'.rand(0,999);
+
         if($request->hasFile('image')){
             $image = $request->file('image');
             $image_name = 'service-'.time().'.'.$image->getClientOriginalExtension();

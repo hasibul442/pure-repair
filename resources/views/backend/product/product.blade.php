@@ -1,7 +1,7 @@
 @extends('backend.layout.master')
-@section('title','Service')
-@section('page_title_name','Service')
-@section('page_dec','Please Set your Service That You Provide')
+@section('title','Producd')
+@section('page_title_name','Product')
+@section('page_dec','Product List')
 
 @section('content')
 <div class="card">
@@ -107,44 +107,4 @@
         </div>
     </div>
     {{-- Data Add Modal End --}}
-
-    <script>
-       $(document).ready(function() {
-    $('#example').DataTable();
-} );
-    </script>
-    <script>
-        $('#serviceForm').on('submit', function(e) {
-            e.preventDefault();
-            $.ajaxSetup({
-                headers: {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                }
-            });
-            var myformData = new FormData($('#serviceForm')[0]);
-            $.ajax({
-                type: "post",
-                url: "{{ route('service-add') }}",
-                data: myformData,
-                cache: false,
-                //enctype: 'multipart/form-data',
-                processData: false,
-                contentType: false,
-                dataType: "json",
-                success: function(response) {
-                    console.log(response);
-                    //$("#categoryform").reset();
-                    $("#serviceForm").find('input').val('');
-                    //$("#categoryTable").DataTable().ajax.reload();
-                    $('#serviceAddModal').modal('hide');
-                    //alert("Data Save");
-                    location.reload();
-                },
-                error: function(error) {
-                    console.log(error);
-                    alert("Data Not Save");
-                }
-            });
-        });
-    </script>
 @endsection

@@ -68,60 +68,14 @@
                 <div class="menu-desktop">
                     <ul class="main-menu respon-sub-menu">
                         <li>
-                            <a href="index.html">Home</a>
+                            <a href="{{url('/home')}}">Home</a>
                         </li>
 
                         <li>
                             <a href="about.html">About Us</a>
                         </li>
-
                         <li>
-                            <a href="services-list.html">Services</a>
-                            <ul class="sub-menu">
-                                <li><a href="services-list.html">Services List</a></li>
-                                <li>
-                                    <a href="#">Services Detail</a>
-
-                                    <ul class="sub-menu">
-                                        <li><a href="services-detail-01.html">Services Detail v1</a></li>
-                                        <li><a href="services-detail-02.html">Services Detail v2</a></li>
-                                        <li><a href="services-detail-03.html">Services Detail v3</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li>
-                            <a href="news-grid.html">News</a>
-                            <ul class="sub-menu">
-                                <li><a href="news-grid.html">News Grid</a></li>
-                                <li><a href="news-list.html">News List</a></li>
-                                <li><a href="news-detail.html">News Detail</a></li>
-                            </ul>
-                        </li>
-
-                        <li>
-                            <a href="projects-grid.html">Projects</a>
-                            <ul class="sub-menu">
-                                <li><a href="projects-grid.html">Projects Grid</a></li>
-                                <li>
-                                    <a href="#">Projects Detail</a>
-
-                                    <ul class="sub-menu">
-                                        <li><a href="projects-detail-01.html">Projects Detail v1</a></li>
-                                        <li><a href="projects-detail-02.html">Projects Detail v2</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li>
-                            <a href="shop-grid.html">Shop</a>
-                            <ul class="sub-menu">
-                                <li><a href="shop-grid.html">Shop Grid</a></li>
-                                <li><a href="shop-detail.html">Shop Detail</a></li>
-                                <li><a href="shop-cart.html">Shop Cart</a></li>
-                            </ul>
+                            <a href="{{url('/service')}}">Services</a>
                         </li>
 
                         <li>
@@ -138,7 +92,7 @@
         <div class="wrap-header-mobile">
             <!-- Logo moblie -->
             <div class="logo-mobile">
-                <a href="#"><img src="{{ asset('frontend/images/icon/logo/logo.png') }}" alt="LOGO"></a>
+                <a href="{{url('/home')}}"><img src="{{ asset('frontend/images/icon/logo/logo.png') }}" alt="LOGO"></a>
             </div>
 
 
