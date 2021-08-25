@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Service;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
 
 class ServiceController extends Controller
@@ -75,9 +76,10 @@ class ServiceController extends Controller
      * @param  \App\Models\Service  $service
      * @return \Illuminate\Http\Response
      */
-    public function edit(Service $service)
+    public function edit($id)
     {
-        //
+        $service = Service::find($id);
+        return view('backend.service.edit',compact('service'));
     }
 
     /**
@@ -87,9 +89,23 @@ class ServiceController extends Controller
      * @param  \App\Models\Service  $service
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Service $service)
+    public function update(Request $request, $id)
     {
-        //
+        $service = Service::find($id);
+        $service->name = $request->name;
+        $service->description = $request->description;
+        if($request->hasFile('image')){
+            $destination = public_path().'/backend/assets/images/service/'.$service->image;
+            if(File::exists($destination)){
+                File::delete($destination);
+            }
+            $image = $request->file('image');
+            $image_name = time().'.'.$image->getClientOriginalExtension();
+            $image->move(public_path().'/backend/assets/images/service/',$image_name);
+            $service->image = $image_name;
+        }
+        $service->update();
+        return redirect()->route('service');
     }
 
     /**
@@ -98,8 +114,20 @@ class ServiceController extends Controller
      * @param  \App\Models\Service  $service
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Service $service)
+    public function destroy($id)
     {
-        //
+        $service = Service::find($id);
+        if(!is_null($service)){
+            $image_path = public_path().'/backend/assets/images/service/'.$service->image;
+            unlink($image_path);
+            $service->delete();
+            return response()->json(['success'=>'Data Delete successfully.']);
+        }
+    }
+    public function servicestatus($id,$status){
+        $service = Service::find($id);
+        $service->status = $status;
+        $service->update();
+        return response()->json(['success'=>'Status changed successfully.']);
     }
 }

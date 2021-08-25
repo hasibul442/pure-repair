@@ -45,7 +45,7 @@
                                 </td>
                                 <td>
                                     {{-- <a type="button" class="btn waves-effect waves-light btn-success btn-outline-success btn-sm" href="#"><i class="icofont icofont-eye-alt"></i></a> --}}
-                                    <a type="button" class="btn waves-effect waves-light btn-warning btn-outline-warning btn-sm" href="javascript:void(0);" data-id="{{ $item->id }}" ><i class="icofont icofont-edit"></i></a>
+                                    {{-- <a type="button" class="btn waves-effect waves-light btn-warning btn-outline-warning btn-sm" href="{{ route('banner.edit', $item->id) }}"><i class="icofont icofont-edit"></i></a> --}}
                                     <a type="button" class="btn waves-effect waves-light btn-danger btn-outline-danger btn-sm deletebtn" href="javascript:void(0);" data-id="{{ $item->id }}"><i class="icofont icofont-delete"></i></a>
                                 </td>
                             </tr>
@@ -102,10 +102,6 @@
                             <input type="hidden" name="status" value="0" class="form-control">
                         </div>
 
-                        {{-- <div class="form-check form-check-flat form-check-primary">
-                  <label class="form-check-label">
-                    <input type="checkbox" class="form-check-input"> Remember me </label>
-                </div> --}}
                         <div class="float-right">
                             <button type="submit" class="btn  btn-sm btn-gradient-primary mr-2">Submit</button>
                             <button type="button" class="btn btn-sm btn-light" data-dismiss="modal">Cancel</button>

@@ -45,7 +45,7 @@
                             </td>
                             <td>
                                 <a type="button" class="btn waves-effect waves-light btn-success btn-outline-success btn-sm" href="#"><i class="icofont icofont-eye-alt"></i></a>
-                                <a type="button" class="btn waves-effect waves-light btn-warning btn-outline-warning btn-sm" href="javascript:void(0);" data-id="{{ $item->id }}" ><i class="icofont icofont-edit"></i></a>
+                                <a type="button" class="btn waves-effect waves-light btn-warning btn-outline-warning btn-sm" href="{{ route('service.edit',$item->id) }}" ><i class="icofont icofont-edit"></i></a>
                                 <a type="button" class="btn waves-effect waves-light btn-danger btn-outline-danger btn-sm deletebtn" href="javascript:void(0);" data-id="{{ $item->id }}"><i class="icofont icofont-delete"></i></a>
                             </td>
                         </tr>
@@ -110,9 +110,29 @@
 
     <script>
        $(document).ready(function() {
-    $('#example').DataTable();
-} );
+            $('#example').DataTable();
+        } );
     </script>
+
+    <script>
+        $(document).on('change', '#status1', function() {
+            var id = $(this).attr('data-id');
+            if (this.checked) {
+                var catstatus = 1;
+            } else {
+                var catstatus = 0;
+            }
+            $.ajax({
+                dataType: "json",
+                url: '/admin/service/' + id + '/' + catstatus,
+                method: 'get',
+                success: function(result1) {
+                    console.log(result1);
+                }
+            });
+        })
+    </script>
+
     <script>
         $('#serviceForm').on('submit', function(e) {
             e.preventDefault();
@@ -145,6 +165,27 @@
                     alert("Data Not Save");
                 }
             });
+        });
+
+        $('body').on('click', '.deletebtn', function() {
+            var id = $(this).data("id");
+            var token = $("meta[name='csrf-token']").attr("content");
+            if (confirm("Are You sure want to delete !")) {
+                $.ajax({
+                    type: "DELETE",
+                    url: "/admin/service/delete/" + id,
+                    data: {
+                        "id": id,
+                        "_token": token,
+                        },
+                    success: function(data) {
+                        location.reload();
+                    },
+                    error: function(data) {
+                        console.log('Error:', data);
+                    }
+                });
+                }
         });
     </script>
 @endsection

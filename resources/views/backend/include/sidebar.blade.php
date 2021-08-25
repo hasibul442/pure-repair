@@ -50,6 +50,27 @@
                     <span class="pcoded-mcaret"></span>
                 </a>
             </li>
+            <li class=" ">
+                <a href="{{ route('service') }}" class="waves-effect waves-dark">
+                    <span class="pcoded-micon"><i class="ti-home"></i><b>S</b></span>
+                    <span class="pcoded-mtext">Service</span>
+                    <span class="pcoded-mcaret"></span>
+                </a>
+            </li>
+            <li class=" ">
+                <a href="{{ route('brand') }}" class="waves-effect waves-dark">
+                    <span class="pcoded-micon"><i class="ti-home"></i><b>B</b></span>
+                    <span class="pcoded-mtext">Brand</span>
+                    <span class="pcoded-mcaret"></span>
+                </a>
+            </li>
+            <li class=" ">
+                <a href="{{ route('product') }}" class="waves-effect waves-dark">
+                    <span class="pcoded-micon"><i class="ti-home"></i><b>P</b></span>
+                    <span class="pcoded-mtext">Product</span>
+                    <span class="pcoded-mcaret"></span>
+                </a>
+            </li>
         </ul>
 
     </div>

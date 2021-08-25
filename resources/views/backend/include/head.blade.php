@@ -19,7 +19,6 @@
     <!-- Favicon icon -->
     <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
     <!-- Google font-->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
     <!-- waves.css -->
     <link rel="stylesheet" type="text/css" href="{{ asset('backend/assets/css/bootstrap/css/bootstrap.min.css') }}">
     <!-- waves.css -->
@@ -29,7 +28,7 @@
     <!-- ico font -->
     <link rel="stylesheet" type="text/css" href="{{ asset('backend/assets/icon/icofont/css/icofont.css') }}">
     <!-- font-awesome-n -->
-    <link rel="stylesheet" type="text/css" href="{{ asset('backend/assets/css/font-awesome-n.min.css') }}">
+    {{-- <link rel="stylesheet" type="text/css" href="{{ asset('backend/assets/css/font-awesome-n.min.css') }}"> --}}
     <link rel="stylesheet" type="text/css" href="{{ asset('backend/assets/css/font-awesome.min.css') }}">
     <!-- scrollbar.css -->
     <link rel="stylesheet" type="text/css" href="{{ asset('backend/assets/css/jquery.mCustomScrollbar.css') }}">
@@ -37,7 +36,9 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('backend/assets/css/style.css') }}">
     <link href="{{ asset('backend/assets/toggle/bootstrap-toggle.min.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
-    <script type="text/javascript" src="{{ asset('backend/assets/js/jquery/jquery.min.js') }} "></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="{{ asset('backend/assets/toggle/bootstrap-toggle.min.js') }}"></script>
 </head>
 
 <body>
