@@ -3050,9 +3050,12 @@ background: linear-gradient(to right, #b94206, #be8c02); /* W3C, IE 10+/ Edge, F
 @media (max-width: 480px) {
 
 }
-
+.service_process{
+    box-shadow: #ffc300 0px 5px 15px;
+}
 .service_process:hover
 {
+    transition: 0.5s;
     cursor: pointer;
-    box-shadow: #e2d30659 0px 5px 15px;
+    box-shadow: #ef233c 0px 0px 20px;
 }

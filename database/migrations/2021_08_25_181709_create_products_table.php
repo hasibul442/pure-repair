@@ -21,8 +21,9 @@ class CreateProductsTable extends Migration
             $table->unsignedInteger('brand_id')->nullable();
             $table->string('slug')->nullable();
             $table->string('image')->nullable();
-            $table->string('description')->nullable();
+            $table->longText('description')->nullable();
             $table->tinyInteger('status')->default(0);
+            $table->enum('condition',['new','default','hot'])->default('default');
 
             $table->foreign('cat_id')->references('id')->on('categories');
             $table->foreign('brand_id')->references('id')->on('brands');

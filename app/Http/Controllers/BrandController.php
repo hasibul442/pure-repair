@@ -112,10 +112,18 @@ class BrandController extends Controller
     {
         $brand = Brand::find($id);
         if(!is_null($brand)){
-            $image_path = public_path().'/backend/assets/images/brand/'.$brand->image;
-            unlink($image_path);
-            $brand->delete();
-            return response()->json(['success'=>'Data Delete successfully.']);
+
+            if(!is_null($brand->document)){
+                $document_path = public_path().'/backend/assets/images/brand/'.$brand->document;
+                unlink($document_path);
+                $brand->delete();
+                return response()->json(['success'=>'Data Delete successfully.']);
+            }
+            else{
+                $brand->delete();
+                return response()->json(['success'=>'Data Delete successfully.']);
+            }
+
         }
     }
 }

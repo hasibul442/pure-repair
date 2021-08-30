@@ -65,6 +65,13 @@
                 </a>
             </li>
             <li class=" ">
+                <a href="{{ route('category') }}" class="waves-effect waves-dark">
+                    <span class="pcoded-micon"><i class="ti-home"></i><b>B</b></span>
+                    <span class="pcoded-mtext">Category</span>
+                    <span class="pcoded-mcaret"></span>
+                </a>
+            </li>
+            <li class=" ">
                 <a href="{{ route('product') }}" class="waves-effect waves-dark">
                     <span class="pcoded-micon"><i class="ti-home"></i><b>P</b></span>
                     <span class="pcoded-mtext">Product</span>

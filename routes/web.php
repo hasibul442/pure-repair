@@ -19,9 +19,17 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 Route::resource('/', 'App\Http\Controllers\FrontpageController');
 Route::get('/','App\Http\Controllers\FrontpageController@homepage');
-Route::get('/home','App\Http\Controllers\FrontpageController@homepage');
+Route::get('/home','App\Http\Controllers\FrontpageController@homepage')->name('home');
 Route::get('/service','App\Http\Controllers\FrontpageController@service');
 Route::get('/allrepairservice/{id}/{slug}','App\Http\Controllers\FrontpageController@single_service_view');
+Route::get('category/{id}/{slug}','App\Http\Controllers\FrontpageController@productgroupview')->name('productgroupview');
+Route::get('/product/{id}/{slug}','App\Http\Controllers\FrontpageController@single_product_view')->name('single_product_view');
+Route::get('/product','App\Http\Controllers\FrontpageController@allproduct')->name('allproduct');
+Route::get('/about','App\Http\Controllers\FrontpageController@aboutus')->name('aboutus');
+
+Route::get('/contact-us','App\Http\Controllers\ContactController@contact')->name('contactus');
+Route::post('/send-message','App\Http\Controllers\ContactController@sendEmail')->name('contact.mail');
+
 
 Route::get('/admin/home', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
 
@@ -49,10 +57,22 @@ Route::delete('/admin/service/delete/{id}','App\Http\Controllers\ServiceControll
 Route::resource('/admin/brand', 'App\Http\Controllers\BrandController');
 Route::get('/admin/brand','App\Http\Controllers\BrandController@index')->name('brand');
 Route::post('/admin/brand/add','App\Http\Controllers\BrandController@store')->name('brand-add');
-Route::delete('/admin/brand/delete/{id}','App\Http\Controllers\BrandController@destroy');
 Route::get('/admin/brand/edit/{id}','App\Http\Controllers\BrandController@edit')->name('brand.edit');
 Route::put('/admin/brand/edit/{id}','App\Http\Controllers\BrandController@update');
+Route::delete('/admin/brand/delete/{id}','App\Http\Controllers\BrandController@destroy');
+
+Route::resource('/admin/category','App\Http\Controllers\CategoryController');
+Route::get('/admin/category','App\Http\Controllers\CategoryController@index')->name('category');
+Route::post('/admin/category/add','App\Http\Controllers\CategoryController@store')->name('category-add');
+Route::delete('/admin/category/delete/{id}','App\Http\Controllers\CategoryController@destroy');
+Route::get('/admin/category/edit/{id}','App\Http\Controllers\CategoryController@edit');
+Route::put('/admin/category/update','App\Http\Controllers\CategoryController@update');
 
 Route::resource('/admin/product', 'App\Http\Controllers\ProductController');
 Route::get('/admin/product', 'App\Http\Controllers\ProductController@index')->name('product');
 Route::post('/admin/product/add','App\Http\Controllers\ProductController@store')->name('product-add');
+Route::get('/admin/product/edit/{id}','App\Http\Controllers\ProductController@edit');
+Route::put('/admin/product/update/{id}','App\Http\Controllers\ProductController@update');
+Route::get('/admin/product/{id}/{catsts}','App\Http\Controllers\ProductController@productstatus')->name('product-status');
+Route::delete('/admin/product/delete/{id}','App\Http\Controllers\ProductController@destroy');
+

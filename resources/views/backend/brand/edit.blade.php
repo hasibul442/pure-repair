@@ -15,7 +15,7 @@
 
                     <div class="form-group">
                         <label>Name<small class="text-danger">*</small></label>
-                        <input type="text" value="{{ $brand->name }}" name="name" class="form-control"/>
+                        <input type="text" name="name" value="{{ $brand->name }}"  class="form-control"/>
                     </div>
                     <div class="form-group">
                         <label for="image">Brand Image</label>
@@ -29,7 +29,12 @@
                 </form>
             </div>
             <div class="col-sm-6">
+                @if($brand->image == Null)
+                <img src="{{ asset('/backend/assets/images/default/default.jpg' ) }}" style="width: 100px; height:100px">
+                @else
                 <img class="img-fluid" src="{{ asset('/backend/assets/images/brand/'.$brand->image) }}" alt="">
+                @endif
+
             </div>
         </div>
     </div>

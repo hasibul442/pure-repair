@@ -114,8 +114,8 @@
 			<!--  -->
 			<div class="row justify-content-center">
                 <div class="col-sm-2 ">
-                    <div class="card mt-2 service_process" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
-                        <div class="card-body ">
+                    <div class="card mt-2 service_process border-0 shadow" >
+                        <div class="card-body shadow">
                             <h3 class="text-center"><b>Service Inquiry</b></h3><br>
                             <p class="text-center">Step <br> 01 <br> <br> Let us know your all Inquiries</p>
 
@@ -124,7 +124,7 @@
                 </div>
 
                 <div class="col-sm-2 ">
-                    <div class="card mt-2 service_process" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+                    <div class="card mt-2 service_process border-0 shadow">
                         <div class="card-body ">
                             <h3 class="text-center"><b>Discuss</b></h3><br>
                             <p class="text-center">Step <br> 02 <br> <br> Discuss With Experts</p>
@@ -134,7 +134,7 @@
                 </div>
 
                 <div class="col-sm-2 ">
-                    <div class="card mt-2 service_process" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+                    <div class="card mt-2 service_process border-0 shadow">
                         <div class="card-body ">
                             <h3 class="text-center"><b>Cost</b></h3><br>
                             <p class="text-center">Step <br> 03 <br> <br>Expert Will Discuss About Cost</p>
@@ -144,7 +144,7 @@
                 </div>
 
                 <div class="col-sm-2 ">
-                    <div class="card mt-2 service_process" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+                    <div class="card mt-2 service_process border-0 shadow">
                         <div class="card-body ">
                             <h3 class="text-center"><b>Take Time</b></h3><br>
                             <p class="text-center">Step <br> 04 <br> <br>We Need time to repeir</p>
@@ -154,7 +154,7 @@
                 </div>
 
                 <div class="col-sm-2 ">
-                    <div class="card mt-2 service_process" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+                    <div class="card mt-2 service_process border-0 shadow">
                         <div class="card-body ">
                             <h3 class="text-center"><b>Device QC</b></h3><br>
                             <p class="text-center">Step <br> 05 <br> <br>We carefully pass QC before delivery</p>
@@ -164,7 +164,7 @@
                 </div>
 
                 <div class="col-sm-2 ">
-                    <div class="card mt-2 service_process" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+                    <div class="card mt-2 service_process border-0 shadow">
                         <div class="card-body ">
                             <h3 class="text-center"><b>Deliver</b></h3><br>
                             <p class="text-center">Step <br> 06 <br> <br>Finally we deliver your device</p>
@@ -360,37 +360,12 @@
 			</div>
 		</div>
 	</section>
+    <section class="bg-0 p-t-92 p-b-60">
+        @include('frontend.include.newproduct')
+    </section>
 
 	<!-- Testimonials -->
-	@include('frontend.include.testimonials')
+	{{-- @include('frontend.include.testimonials') --}}
 
-	<!-- Sign up -->
-	<section class="bg-0 p-t-92 p-b-90">
-		<div class="container">
-			<!-- Title section -->
-			<div class="flex-col-c-c p-b-44">
-				<h3 class="t1-b-1 cl-3 txt-center m-b-11">
-					Sign Up
-				</h3>
-
-				<div class="size-a-2 bg-3"></div>
-			</div>
-
-			<!--  -->
-			<div class="size-w-1 m-rl-auto">
-				<p class="size-w-2 m-rl-auto t1-s-2 cl6 txt-center p-b-13">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor dunt ut labore et dolore magna aliqua
-				</p>
-
-				<form class="flex-wr-c-c">
-					<input class="size-a-5 bo-all-1 bcl-11 t1-m-2 cl-6 plh-6 p-rl-20 w-full-sr575 m-tb-10" type="text" name="email" placeholder="email@example.com">
-
-					<button class="size-a-6 flex-c-c bg-11 t1-s-2 text-uppercase cl-0 hov-btn1 trans-02 m-tb-10">
-						Subscribe
-					</button>
-				</form>
-			</div>
-		</div>
-	</section>
 
 @endsection

@@ -72,14 +72,22 @@
                         </li>
 
                         <li>
-                            <a href="about.html">About Us</a>
+                            <a href="{{  route('aboutus')  }}">About Us</a>
                         </li>
                         <li>
                             <a href="{{url('/service')}}">Services</a>
                         </li>
-
                         <li>
-                            <a href="contact.html">Contact us</a>
+                            <a href="{{ route('allproduct') }}">Products</a>
+                            <ul class="sub-menu">
+                                @foreach (App\Models\Category::get() as $item )
+                                    <li><a href="{{ url('category/'.$item->id.'/'.$item->cat_name) }}">{{ $item->cat_name }}</a></li>
+                                @endforeach
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="{{ route('contactus') }}">Contact us</a>
                         </li>
                     </ul>
                 </div>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
 
 class ProductController extends Controller
@@ -45,9 +46,11 @@ class ProductController extends Controller
         $product = new Product;
         $product->p_name = $request->p_name;
         $product->price = $request->price;
-        $product->brand = $request->brand;
         $product->description = $request->description;
         $product->status = $request->status;
+        $product->cat_id = $request->cat_id;
+        $product->brand_id = $request->brand_id;
+        $product->condition = $request->condition;
         $product->slug = $slug.'-'.date('ymdis').'-'.rand(0,999);
         if($request->hasFile('image')){
             $image = $request->file('image');
@@ -76,9 +79,10 @@ class ProductController extends Controller
      * @param  \App\Models\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function edit(Product $product)
+    public function edit($id)
     {
-        //
+        $product = Product::find($id);
+        return view('backend.product.product-edit',compact('product'));
     }
 
     /**
@@ -88,9 +92,28 @@ class ProductController extends Controller
      * @param  \App\Models\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Product $product)
+    public function update(Request $request, $id)
     {
-        //
+        $product = Product::find($id);
+        $product->p_name = $request->p_name;
+        $product->price = $request->price;
+        $product->description = $request->description;
+        $product->status = $request->status;
+        $product->cat_id = $request->cat_id;
+        $product->brand_id = $request->brand_id;
+        $product->condition = $request->condition;
+        if($request->hasFile('image')){
+            $destination = public_path().'/backend/assets/images/product/'.$product->image;
+            if(File::exists($destination)){
+                File::delete($destination);
+            }
+            $image = $request->file('image');
+            $image_name = 'product-'.time().'.'.$image->getClientOriginalExtension();
+            $image->move(public_path().'/backend/assets/images/product/',$image_name);
+            $product->image = $image_name;
+        }
+        $product->update();
+        return redirect()->route('product');
     }
 
     /**
@@ -99,8 +122,24 @@ class ProductController extends Controller
      * @param  \App\Models\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Product $product)
+    public function destroy($id)
     {
-        //
+        $product = Product::find($id);
+        if(!is_null($product)){
+            $image_path = public_path().'/backend/assets/images/product/'.$product->image;
+            unlink($image_path);
+            $product->delete();
+            return response()->json(['success'=>'Data Delete successfully.']);
+        }
     }
+    public function productstatus($id,$status){
+        $product = Product::find($id);
+        $product->status = $status;
+        $product->update();
+        return response()->json(['success'=>'Status changed successfully.']);
+    }
+
+
+
+
 }

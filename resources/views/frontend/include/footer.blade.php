@@ -11,7 +11,7 @@
 
                     <div>
                         <p class="t1-s-2 cl-13 p-b-17">
-                            On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized   the charms of pleasure of.
+                            It is our goal to provide innovative repair services for cell phones, tablets, Note and more; providing excellent customer service and quality repair with a quick turnaround. We strive to get you back to normal use of your device as soon as possible.
                         </p>
 
                         <div class="flex-wr-s-c p-t-10">

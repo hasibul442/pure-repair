@@ -1,5 +1,5 @@
 <!--===============================================================================================-->
-<script src="{{ asset('frontend/vendor/jquery/jquery-3.2.1.min.js') }}"></script>
+
 <!--===============================================================================================-->
 	<script src="{{ asset('frontend/vendor/animsition/js/animsition.min.js') }}"></script>
 <!--===============================================================================================-->
@@ -32,7 +32,11 @@
 <!--===============================================================================================-->
 	<script src="{{ asset('frontend/vendor/MagnificPopup/jquery.magnific-popup.min.js') }}"></script>
 <!--===============================================================================================-->
-	<script src="{{ asset('frontend/js/main.js') }}"></script>
+
+
+
+<script src="{{ asset('frontend/js/contact.js') }}"></script>
+<script src="{{ asset('frontend/js/main.js') }}"></script>
 
 </body>
 </html>
