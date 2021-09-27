@@ -6,11 +6,11 @@ If owner think that this product/service not available right now it will come ba
 
 I make Simple CMS for control this web sit
 
-#For Frontend: 
+# For Frontend: 
 Html, Css, Bootstrap, Datatable, Fontawsome, Jquery, Ajax
 
-#For Backend: 
+# For Backend: 
 Php, MySql Database.
 
-#Web Framework:
+# Web Framework:
 Laravel
